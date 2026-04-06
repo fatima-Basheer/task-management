@@ -5,7 +5,7 @@ function ProjectDetails() {
   const { id } = useParams();
 
   const project = useSelector((state) =>
-    state.projects.projects.find((p) => p.id.toString() === id)
+    state.projects.projects.find((p) => p.id.toString() === id),
   );
 
   if (!project) {

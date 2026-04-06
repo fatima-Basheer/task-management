@@ -31,7 +31,7 @@ export default function TaskBoard() {
       collisionDetection={closestCorners}
       onDragEnd={handleDragEnd}
     >
-      <div className="min-h-screen flex justify-center items-start bg-gray-800 p-6 text-gray-500 font-medium">
+      <div className="min-h-screen flex justify-center items-start bg-gray-100 p-6 text-gray-500 font-medium">
         <div className="flex gap-6">
           <Column id="todo" title="Todo" tasks={getTasks("todo")} />
           <Column id="in-progress" title="In Progress" tasks={getTasks("in-progress")} />

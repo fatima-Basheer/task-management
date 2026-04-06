@@ -6,7 +6,6 @@ import TaskBoard from "./pages/TaskBoard.jsx";
 import TaskDetails from "./pages/TaskDetails.jsx";
 import AppLayout from "./AppLayout.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
-import Stair from "./Stair.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import { Provider } from "react-redux";

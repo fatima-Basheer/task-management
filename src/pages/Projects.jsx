@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
   return (
-    <div>
+    <div className="bg-gray-100">
       <ProjectCard />
     </div>
   );

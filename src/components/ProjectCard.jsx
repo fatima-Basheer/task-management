@@ -10,7 +10,7 @@ import {
 
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
-import { useGSAP } from "@gsap/react";
+
 
 gsap.registerPlugin(Flip);
 
@@ -65,25 +65,17 @@ function ProjectCard() {
 
   return (
     <>
-      <div className="flex justify-between bg-gray-900 px-10 md:px-20 py-4">
-        <nav>
-          <input
-            type="text"
-            placeholder="Find a project..."
-            className="border-2 border-gray-400 flex w-[200px] md:w-2xl p-2 text-gray-200 font-semibold"
-          />
-        </nav>
-
+      <div className="flex justify-end p-4">
         <button
           onClick={() => setShow(!show)}
-          className="block md:hidden bg-indigo-500 p-2"
+          className="block md:hidden font-extrabold p-2 left-3"
         >
-          <IoAddSharp className="text-white h-7 w-7" />
+          <IoAddSharp className="text-black h-7 w-7" />
         </button>
 
         <button
           onClick={() => setShow(!show)}
-          className="hidden md:block px-5 py-1.5 text-sm font-semibold text-white bg-indigo-500"
+          className="hidden md:block text-black bg-gray-100 font-extrabold text-2xl border-2 rounded-full px-4 py-2 hover:text-white hover:bg-black"
         >
           Add new Project
         </button>
@@ -129,12 +121,12 @@ function ProjectCard() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="card p-4 rounded-xl bg-gray-900 border border-gray-700 shadow-lg hover:shadow-gray-500 transition hover:-translate-y-2"
+              className="card p-4 rounded-xl bg-white border shadow-lg hover:shadow-gray-500 transition hover:-translate-y-2"
             >
               <Link to={`/projects/${project.id}`}>
                 <h3
                   onClick={() => dispatch(selectProject(project))}
-                  className="text-lg font-semibold cursor-pointer hover:underline"
+                  className="text-gray-950 text-xl font-semibold cursor-pointer hover:underline"
                 >
                   {project.title}
                 </h3>
@@ -142,7 +134,7 @@ function ProjectCard() {
 
               <button
                 onClick={(e) => handleDelete(e, project.id)}
-                className="mt-3 w-full bg-red-500 py-1.5 rounded-md hover:bg-red-400"
+                className="mt-15 w-full bg-purple-700 py-1.5 rounded-md hover:bg-red-400"
               >
                 Delete Project
               </button>

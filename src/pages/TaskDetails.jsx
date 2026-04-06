@@ -34,7 +34,7 @@ export default function TaskDetails() {
   return (
     <div
   ref={container}
-  className="min-h-screen flex justify-center items-center bg-gray-950 p-6"
+  className="min-h-screen flex justify-center items-center bg-white p-6"
 >
   <div className="card w-full max-w-md p-5 rounded-xl bg-gray-900 border border-gray-700 shadow-lg hover:shadow-gray-400 hover:border-gray-500 transition hover:-translate-y-2"
   >
