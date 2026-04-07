@@ -1,6 +1,6 @@
 import { DndContext, closestCorners } from "@dnd-kit/core";
 import { useSelector, useDispatch } from "react-redux";
-import { moveTask, addTask, deleteTask } from "../features/tasksSlice";
+import { moveTask, addTask } from "../features/tasksSlice";
 import { useState } from "react";
 import Column from "../components/Column";
 import { RxCross1 } from "react-icons/rx";

@@ -1,5 +1,3 @@
-
-
 import ProjectCard from "../components/ProjectCard";
 
 
