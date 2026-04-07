@@ -154,7 +154,7 @@ const card=document.querySelector('.card');
             <div
               key={project.id}
               ref={(el) => (cardRefs.current[project.id] = el)}
-              className="card p-4 rounded-xl bg-white border shadow-lg hover:shadow-gray-500 transition hover:!-translate-y-2 duration-300"
+              className="card p-4 rounded-xl bg-white border shadow-lg hover:shadow-gray-500"
             >
               <Link to={`/projects/${project.id}`}>
                 <h3
