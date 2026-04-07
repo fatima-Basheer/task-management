@@ -20,7 +20,7 @@ function ProjectCard() {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const projects = useSelector((state) => state.projects.projects);
-
+const card=document.querySelector('.card');
   const containerRef = useRef(null);
   const handleRemove = (id, el) => {
     gsap.to(el, {
@@ -53,6 +53,7 @@ function ProjectCard() {
         },
       );
     });
+
   });
 
   // const handleRemove = (id) => {
@@ -153,7 +154,7 @@ function ProjectCard() {
             <div
               key={project.id}
               ref={(el) => (cardRefs.current[project.id] = el)}
-              className="card relative card p-4 rounded-xl bg-white border shadow-lg hover:shadow-gray-500 transition hover:-translate-y-2"
+              className="card p-4 rounded-xl bg-white border shadow-lg hover:shadow-gray-500 transition hover:!-translate-y-2 duration-300"
             >
               <Link to={`/projects/${project.id}`}>
                 <h3

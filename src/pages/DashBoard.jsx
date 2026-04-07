@@ -68,7 +68,7 @@ export default function DashBoard() {
   return (
     <div
       ref={containerRef}
-      className="p-4 sm:p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
+      className="p-2 sm:p-6 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
     >
       {stats.map((item, index) => (
         <div
