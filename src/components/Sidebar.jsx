@@ -13,9 +13,7 @@ function Sidebar({ isOpen, setIsOpen }) {
     const items = itemsRef.current;
 
     if (isOpen) {
-
       gsap.set(items, { x: -20, opacity: 0 });
-
 
       gsap.to(items, {
         x: 0,
@@ -30,29 +28,27 @@ function Sidebar({ isOpen, setIsOpen }) {
 
   return (
     <div
-      className={`h-screen bg-gray-900 text-gray-200 flex flex-col p-2 overflow-hidden transition-all duration-700 ${
+      className={`h-screen bg-gray-900 text-gray-200 flex flex-col p-2 overflow-hidden transition-all duration-700 z-50 ${
         isOpen ? "w-64" : "w-16"
       }`}
     >
-
       <div className="p-3">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white text-2xl"
+          className="text-white text-2xl hover:cursor-pointer"
         >
-        <FiMenu />
+          <FiMenu />
         </button>
       </div>
-
-
       <div className="flex flex-col gap-2 mt-4 gap-y-8">
-
         <Link
           ref={(el) => (itemsRef.current[0] = el)}
           to="/"
           className="flex items-center gap-3 px-3 py-2 hover:bg-gray-700 hover:text-white hover:font-bold rounded"
         >
-          <span className="text-gray-200 text-2xl hover:text-white hover:font-bold"><IoHome /></span>
+          <span className="text-gray-200 text-2xl hover:text-white hover:font-bold">
+            <IoHome />
+          </span>
           {isOpen && <span className="text-xl">Dashboard</span>}
         </Link>
 
@@ -61,8 +57,14 @@ function Sidebar({ isOpen, setIsOpen }) {
           to="/projects"
           className="flex items-center gap-3 px-3 py-2 hover:bg-gray-700 rounded"
         >
-          <span className="text-2xl text-gray-200 hover:text-white hover:font-bold"><IoFolderOpenOutline /></span>
-          {isOpen && <span className="text-xl hover:text-white hover:font-bold ">Projects</span>}
+          <span className="text-2xl text-gray-200 hover:text-white hover:font-bold">
+            <IoFolderOpenOutline />
+          </span>
+          {isOpen && (
+            <span className="text-xl hover:text-white hover:font-bold ">
+              Projects
+            </span>
+          )}
         </Link>
 
         <Link
@@ -70,10 +72,15 @@ function Sidebar({ isOpen, setIsOpen }) {
           to="/task-board"
           className="flex items-center gap-3 px-3 py-2 hover:bg-gray-700 rounded"
         >
-          <span className="text-gray-200 text-2xl"><FiClipboard /></span>
-          {isOpen && <span className="text-xl hover:text-white hover:font-bold">Task Board</span>}
+          <span className="text-gray-200 text-2xl">
+            <FiClipboard />
+          </span>
+          {isOpen && (
+            <span className="text-xl hover:text-white hover:font-bold">
+              Task Board
+            </span>
+          )}
         </Link>
-
       </div>
     </div>
   );

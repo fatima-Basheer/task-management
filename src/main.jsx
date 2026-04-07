@@ -4,14 +4,14 @@ import DashBoard from "./pages/DashBoard.jsx";
 import Projects from "./pages/Projects.jsx";
 import TaskBoard from "./pages/TaskBoard.jsx";
 import TaskDetails from "./pages/TaskDetails.jsx";
-import AppLayout from "./AppLayout.jsx";
+import AppLayout from "./components/AppLayout.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
 import "./index.css";
-import App from "./App.jsx";
+import "./App.css";
 import { Provider } from "react-redux";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import store from "./app/store";
+import store from "./store/store.js";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "projects/:id",
-        element: <ProjectDetails />
+        element: <ProjectDetails />,
       },
       {
         path: "task-board",

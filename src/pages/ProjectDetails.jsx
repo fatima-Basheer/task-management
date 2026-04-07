@@ -21,7 +21,9 @@ function ProjectDetails() {
       <h1 className="text-3xl font-bold text-gray-800">{project.title}</h1>
 
       <div className="mt-6 bg-gray-900 p-6 rounded-lg">
-        <h2 className="text-xl font-semibold mb-2 text-white">Details</h2>
+        <h2 className="text-xl font-semibold mb-2 text-white text-wrap">
+          Details
+        </h2>
         <p className="text-gray-400">{project.details}</p>
       </div>
     </div>

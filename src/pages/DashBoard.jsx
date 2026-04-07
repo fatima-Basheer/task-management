@@ -62,7 +62,7 @@ export default function DashBoard() {
         });
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -70,7 +70,6 @@ export default function DashBoard() {
       ref={containerRef}
       className="p-4 sm:p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
     >
-
       {stats.map((item, index) => (
         <div
           key={index}
@@ -112,15 +111,12 @@ export default function DashBoard() {
         </div>
       ))}
 
-
       <div className="card md:col-span-2 bg-white rounded-xl p-2 sm:p-6 shadow-lg">
         <h4 className="text-gray-600 text-sm sm:text-base sm:mb-6">
           Active Projects
         </h4>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-          
-    
           <div className="flex flex-col gap-3 sm:gap-4">
             {projects.map((proj, i) => (
               <div
@@ -132,7 +128,6 @@ export default function DashBoard() {
               </div>
             ))}
           </div>
-
 
           <div className="flex justify-center">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56">

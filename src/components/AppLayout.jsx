@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "./components/Sidebar";
+import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
 export default function AppLayout() {
@@ -7,7 +7,7 @@ export default function AppLayout() {
 
   return (
     <div className="flex h-screen">
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex-1 bg-gray-100 overflow-auto">
         <Outlet />

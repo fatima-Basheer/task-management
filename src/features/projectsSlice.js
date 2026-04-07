@@ -25,7 +25,7 @@ const initialState = {
       details: "Using react ,tailwind css ,gsap and mongoDB",
     },
   ],
-  selectedProject: null,
+
 };
 
 const projectsSlice = createSlice({
