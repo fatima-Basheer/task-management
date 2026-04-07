@@ -8,7 +8,7 @@ export default function TaskBoard() {
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState("");
   const [assignTo, setAssignTo] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("todo");
   const [description, setDescription] = useState("");
   const tasks = useSelector((state) => state.tasks.tasks);
   const dispatch = useDispatch();

@@ -6,7 +6,6 @@ import TaskBoard from "./pages/TaskBoard.jsx";
 import TaskDetails from "./pages/TaskDetails.jsx";
 import AppLayout from "./components/AppLayout.jsx";
 import ProjectDetails from "./pages/ProjectDetails.jsx";
-import "./index.css";
 import "./App.css";
 import { Provider } from "react-redux";
 

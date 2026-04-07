@@ -20,7 +20,6 @@ function ProjectCard() {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const projects = useSelector((state) => state.projects.projects);
-const card=document.querySelector('.card');
   const containerRef = useRef(null);
   const handleRemove = (id, el) => {
     gsap.to(el, {
@@ -36,43 +35,24 @@ const card=document.querySelector('.card');
     });
   };
 
-  useGSAP(() => {
-    gsap.utils.toArray(".card").forEach((card) => {
-      gsap.fromTo(
-        card,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 20,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 3,
-          },
+useGSAP(() => {
+  gsap.utils.toArray(".card").forEach((card) => {
+    gsap.fromTo(
+      card,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 20,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 3,
         },
-      );
-    });
-
+      }
+    );
   });
-
-  // const handleRemove = (id) => {
-  //   const container = containerRef.current;
-
-  //   const state = Flip.getState(container);
-
-  //   dispatch(deleteProject(id));
-
-  //   requestAnimationFrame(() => {
-  //     Flip.from(state, {
-  //       duration: 0.6,
-  //       ease: "power2.inOut",
-  //       absolute: true,
-  //       scale: true,
-  //       simple: true
-  //     });
-  //   });
-  // };
+}, [projects]);
 
   const handleAdd = (e) => {
     e.preventDefault();
